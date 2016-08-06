@@ -48,8 +48,13 @@ namespace vs_android.Build.CPPTasks.Android
 		[Required]
 		public ITaskItem[] Sources { get; set; }
 
+        [Required]
+        public ITaskItem[] GenerateDependencyFiles { get; set; }
 
-		public GCCCompile()
+        [Required]
+        public ITaskItem[] ProgramDataBaseFileName { get; set; }
+
+        public GCCCompile()
 			: base(new ResourceManager("vs_android.Build.CppTasks.Android.Properties.Resources", Assembly.GetExecutingAssembly()))
 		{
 
